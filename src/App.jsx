@@ -1,26 +1,17 @@
 import { useState } from 'react'
+import { AddCategory } from './components/AddCategory'
 
 export const App = () => {
 
   const [categories, setCategories] =  useState(['dragon ball', 'one punch'])
 
-  const onAddCategory = (categoryName) => {
-    const item = categories.find(item => item === categoryName)
-    if(item) {
-      return
-    }
-    setCategories([categoryName, ...categories])
-  }
-
   return (
     <div>
-      <h1> Gifexpertapp </h1>
-      
-      <input type="text" />
+      <h1> Gif Expert App </h1>
 
-      <button onClick={() => onAddCategory('inuyasha')}> Agregar </button>
-
-      <ul>
+      <AddCategory onAddCategory={setCategories} categories={categories}/>
+  
+       <ul>
         {
           categories.map(category => (
             <li key={category}>{category}</li>
