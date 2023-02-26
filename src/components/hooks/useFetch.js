@@ -6,6 +6,7 @@ export const useFetch = ({ baseUrl, category, apiKey }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log('Llamando datos...')
         const response = await fetch(`${baseUrl}?api_key=${apiKey}&q=${category}&limit=5`)
         const { data } = await response.json()
         setData(data)

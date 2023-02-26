@@ -1,7 +1,14 @@
+.GifCard {
+  border-radius: 6px;
+  background-color: #ff704d;
+  color: white;
+}
 .GifCard figcaption {
   margin-bottom: 32px;
 }
+.GifCard-ImageContainer {
+  padding: 4px;
+}
 .GifCard-ImageContainer img {
   width: 100%;
-  max-width: 320px;
 }

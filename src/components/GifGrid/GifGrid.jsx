@@ -9,8 +9,6 @@ export const GifGrid = ({ category }) => {
 
   const data = useFetch({ baseUrl, category, apiKey })
 
-  console.log('Me volvi a llamar :(', data)
-
   return (
     <>
       <h2 className="Gif-Title">{category}</h2>

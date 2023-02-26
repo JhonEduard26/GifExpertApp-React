@@ -6,9 +6,6 @@
   margin: 0;
   padding: 0;
 }
-html {
-  background-color: #3b3b3b;
-}
 body {
   width: 85%;
   min-height: 100vh;
