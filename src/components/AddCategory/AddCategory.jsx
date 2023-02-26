@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './AddCategory.css'
 
-export const AddCategory = ({ onAddCategory, categories }) => {
+export const AddCategory = ({ onNewCategory }) => {
   const [userInput, setUserInput] = useState('')
+  const inputRef = useRef(null)
 
   const onInputChange = ({target}) => {
     setUserInput(target.value)
@@ -10,25 +11,26 @@ export const AddCategory = ({ onAddCategory, categories }) => {
 
   const onSubmit = (event) => {
     event.preventDefault()
-    if(userInput.trim().length <= 1) return
 
-    if(categories.find(category => category === userInput)) {
-      setUserInput('')
-      return
-    }
+    const newUserValue = userInput.trim()
 
-    onAddCategory((categories) => [userInput, ...categories])
+    if(newUserValue.length <= 1) return
+
+    onNewCategory(newUserValue)
     setUserInput('')
+    inputRef.current.focus()
   }
 
   return (
     <form onSubmit={onSubmit}>
-      <input 
+      <input
+        autoFocus
         name="userInput"
+        ref={inputRef}
         onChange={onInputChange}
         placeholder="Buscar imágenes"
         type="text"
-        value={userInput} 
+        value={userInput}
       />
 
       <input type="submit" value="Agregar"/>

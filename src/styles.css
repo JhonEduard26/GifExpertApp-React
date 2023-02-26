@@ -10,10 +10,10 @@ html {
   background-color: #a3d3ff;
 }
 body {
-  display: flex;
+  display: grid;
   justify-content: center;
-  width: 100%;
   min-height: 100vh;
+  margin: 0 auto;
   padding: 32px 0;  
   background-color: #ebebeb;
 }
