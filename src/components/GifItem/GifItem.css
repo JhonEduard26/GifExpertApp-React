@@ -1,3 +1,7 @@
-.GifCard p{
+.GifCard figcaption {
   margin-bottom: 32px;
+}
+.GifCard-ImageContainer img {
+  width: 100%;
+  max-width: 320px;
 }

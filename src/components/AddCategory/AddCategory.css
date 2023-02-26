@@ -1,7 +1,7 @@
 form {
-  display: flex;  
+  display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   margin-bottom: 16px;
 }
 input {
@@ -9,9 +9,15 @@ input {
   padding: 4px 8px;
   border-radius: 8px;
   border: 0;
-  outline: 1px solid #e0f2ff;
 }
 input[type="submit"] {
+  cursor: pointer;
   background-color: #ff704d;
   color: white;
+}
+input[type="submit"]:hover {
+  background-color: #d15c3f;
+}
+input[type="text"]:focus {
+  outline: 2px solid #ff704d;
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { AddCategory } from './components/AddCategory'
 import { GifGrid } from './components/GifGrid'
+import './styles.css'
 
 export const App = () => {
 
@@ -12,8 +13,8 @@ export const App = () => {
   }
 
   return (
-    <div style={{width: '516px'}}>
-      <h1> Gif Expert App </h1>
+    <div>
+      <h1 className='Main-Title'> Gif Expert App </h1>
 
       <AddCategory onNewCategory={onNewCategory} />
       {

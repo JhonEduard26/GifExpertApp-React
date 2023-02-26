@@ -7,17 +7,19 @@
   padding: 0;
 }
 html {
-  background-color: #a3d3ff;
+  background-color: #3b3b3b;
 }
 body {
-  display: grid;
-  justify-content: center;
+  width: 85%;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 32px 0;  
+  padding: 32px 16px;  
   background-color: #ebebeb;
 }
 h1 {
   margin-bottom: 16px;
   color: #3b3b3b;
+}
+.Main-Title {
+  text-align: center;
 }

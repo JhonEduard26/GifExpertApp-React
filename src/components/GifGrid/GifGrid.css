@@ -1,4 +1,9 @@
-.Category-Title {
+.Gif-Title {
   margin: 48px 0;
   margin-bottom: 16px;
+}
+.Gif-Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
 }
