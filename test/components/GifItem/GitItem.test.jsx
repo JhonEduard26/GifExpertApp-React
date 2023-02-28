@@ -7,7 +7,7 @@ describe('Pruebas en el componente Gif Item', () => {
   const url = 'https://batman.com/batman.jpg'
 
   it('debe de mostrar la imagen con el src y el alt indicado', () => {
-    const { getByRole } = render(<GifItem title={title} altText={title} image={{ url }} />)
+    const { getByRole } = render(<GifItem title={ title } imageUrl={ url } />)
 
     const { src, alt } = getByRole('img')
     expect( src ).toBe( url )
@@ -15,7 +15,7 @@ describe('Pruebas en el componente Gif Item', () => {
   })
 
   it('debe de mostrar el titulo del gif', () => {
-    const { getByText } = render(<GifItem title={title} altText={title} image={{ url }} />)
+    const { getByText } = render(<GifItem title={ title } imageUrl={ url } />)
 
     const textElement = getByText('Batman')
     expect(textElement).toBeTruthy()
